@@ -6,7 +6,7 @@ export default function Nav() {
     <nav className={navStyles.nav}>
       <ul>
         <li>
-          <Link href="/">Benjamin Shapiro's Photography</Link>
+          <Link href="/">Benjamin Shapiro&apos;s Photography</Link>
         </li>
       </ul>
     </nav>

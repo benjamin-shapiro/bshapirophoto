@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Benjamin Shapiro's Photography</title>
+        <title>Benjamin Shapiro&apos;s Photography</title>
         <meta
           name="keywords"
           content="Benjamin Shapiro Photography,
