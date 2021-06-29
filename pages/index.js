@@ -6,7 +6,7 @@ import travelcover from "../public/Cover Images/Davids and Goliath.jpg";
 import wildlifecover from "../public/Cover Images/Eyes In A Green Ocean Cover.jpg";
 import astrocover from "../public/Cover Images/Self Portrait.jpg";
 import experimentalcover from "../public/Cover Images/Zara Eye.jpg";
-import ithacacover from "../public/ithaca/Trippin Hammer Swirl 2_.jpg";
+import triphammer from "../public/ithaca/Trippin Hammer Swirl 2_.jpg";
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
         <Image src={wildlifecover} placeholder="blur"></Image>
       </Link>
       <Link href="/ithaca">
-        <Image src={ithacacover} placeholder="blur"></Image>
+        <Image src={triphammer} placeholder="blur"></Image>
       </Link>
       <Link href="/experimental">
         <Image src={experimentalcover} placeholder="blur"></Image>
