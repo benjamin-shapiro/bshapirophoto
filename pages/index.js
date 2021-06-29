@@ -24,14 +24,15 @@ export default function Home() {
         Travel Photography"
         />
       </Head>
+
+      <Link href="/astro">
+        <Image src={astrocover} placeholder="blur"></Image>
+      </Link>
       <Link href="/travel">
         <Image src={travelcover} placeholder="blur"></Image>
       </Link>
       <Link href="/wildlife">
         <Image src={wildlifecover} placeholder="blur"></Image>
-      </Link>
-      <Link href="/astro">
-        <Image src={astrocover} placeholder="blur"></Image>
       </Link>
       <Link href="/ithaca">
         <Image src={ithacacover} placeholder="blur"></Image>
