@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import homestyles from "../styles/Home.module.css";
 
-import travelcover from "../public/Cover Images/Davids and Goliath.jpg";
-import wildlifecover from "../public/Cover Images/Eyes In A Green Ocean Cover.jpg";
-import astrocover from "../public/Cover Images/Self Portrait.jpg";
-import experimentalcover from "../public/Cover Images/Zara Eye.jpg";
-import triphammer from "../public/ithaca/Trippin Hammer Swirl 2_.jpg";
+import travelcover from "../pages/public/Cover Images/Davids and Goliath.jpg";
+import wildlifecover from "../pages/public/Cover Images/Eyes In A Green Ocean Cover.jpg";
+import astrocover from "../pages/public/Cover Images/Self Portrait.jpg";
+import experimentalcover from "../pages/public/Cover Images/Zara Eye.jpg";
+import triphammer from "../pages/public/ithaca/Trippin Hammer Swirl 2_.jpg";
 
 export default function Home() {
   return (
