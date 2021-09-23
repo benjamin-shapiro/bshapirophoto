@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Nav from "../components/Nav.js"
+
 import astrobike from "../public/ithaca/Astro Bike_.jpg";
 import beebesouth from "../public/ithaca/Beebe South Long.jpg";
 import beebelong from "../public/ithaca/Beebe Wide 2_.jpg";
@@ -12,6 +14,7 @@ import triphammer from "../public/ithaca/Trippin Hammer Swirl 2_.jpg";
 export default function Ithaca() {
   return (
     <div>
+    <div><Nav/></div>
       <h1>Ithaca</h1>
       <Image src={astrobike} placeholder="blur"></Image>
       <Image src={beebesouth} placeholder="blur"></Image>

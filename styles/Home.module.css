@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 20%;
+  padding: 5px;
+}
+
+.column:hover{
+  transform: scale(1.1);
+  z-index: 2
+}
+
+.section_title {
+  color: white;
+  text-align: center;
+}
+
+.overall_title {
+  color: white;
+  padding-bottom:10%;
+  padding-top: 10px;
+  text-align: center;
+
+}
