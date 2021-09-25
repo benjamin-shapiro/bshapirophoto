@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Nav from "../components/Nav.js";
+import gallerystyles from "../styles/Gallery.module.css";
 
 /*
 import astrobike from "../pages/public/ithaca/Astro Bike_.jpg";
@@ -15,11 +16,13 @@ import triphammer from "../pages/public/ithaca/Trippin Hammer Swirl 2_.jpg";
 
 export default function Ithaca() {
   return (
-    <div>
+    <div style={{ backgroundColor: "black" }}>
       <div>
         <Nav />
       </div>
-      <h1>Ithaca</h1>
+      <div className={gallerystyles.gallery_title}>
+        <h1>Ithaca</h1>
+      </div>
     </div>
   );
 }

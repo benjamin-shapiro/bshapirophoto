@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Nav from "../components/Nav.js";
+import gallerystyles from "../styles/Gallery.module.css";
 
 /*
 import astrobackyard from "../pages/public/Astro/Astro Backyard.jpg";
@@ -16,11 +17,13 @@ import stellarmeditation from "../pages/public/Astro/Stellar Meditation.jpg";
 
 export default function Astro() {
   return (
-    <div>
+    <div style={{ backgroundColor: "black" }}>
       <div>
         <Nav />
       </div>
-      <h1>Astro</h1>
+      <div className={gallerystyles.gallery_title}>
+        <h1>Astro</h1>
+      </div>
     </div>
   );
 }

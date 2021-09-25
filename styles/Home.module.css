@@ -1,5 +1,6 @@
 .row {
   display: flex;
+  padding-bottom: 100%;
 }
 
 .column {
@@ -7,9 +8,9 @@
   padding: 5px;
 }
 
-.column:hover{
-  transform: scale(1.1);
-  z-index: 2
+.column:hover {
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .section_title {
@@ -19,8 +20,7 @@
 
 .overall_title {
   color: white;
-  padding-bottom:10%;
+  padding-bottom: 10%;
   padding-top: 10px;
   text-align: center;
-
 }
