@@ -7,6 +7,7 @@ import homestyles from "../styles/Home.module.css";
 //import astrocover from "../pages/public/Cover Images/Self Portrait.jpg";
 //import experimentalcover from "../pages/public/Cover Images/Zara Eye.jpg";
 //import triphammer from "../pages/public/ithaca/Trippin Hammer Swirl 2_.jpg";
+import doge from "../public/testdoge.png";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       <div className={homestyles.overall_title}>
         Benjamin Shapiro&apos;s Photography
       </div>
+      <Link href="/astro">
+        <Image src={doge} placeholder="blur"></Image>
+      </Link>
     </div>
   );
 }
