@@ -21,17 +21,18 @@ export default function Astro() {
         <Nav />
       </div>
       <h1>Astro</h1>
-      /*
-      <Image src={astrobackyard} placeholder="blur"></Image>
-      <Image src={eyeofthestorm} placeholder="blur"></Image>
-      <Image src={giantleap} placeholder="blur"></Image>
-      <Image src={lunareclipse} placeholder="blur"></Image>
-      <Image src={mountainnight} placeholder="blur"></Image>
-      <Image src={pathoftotality} placeholder="blur"></Image>
-      <Image src={purplemountain} placeholder="blur"></Image>
-      <Image src={selfportrait} placeholder="blur"></Image>
-      <Image src={stellarmeditation} placeholder="blur"></Image>
-      */
     </div>
   );
 }
+
+/*
+<Image src={astrobackyard} placeholder="blur"></Image>
+<Image src={eyeofthestorm} placeholder="blur"></Image>
+<Image src={giantleap} placeholder="blur"></Image>
+<Image src={lunareclipse} placeholder="blur"></Image>
+<Image src={mountainnight} placeholder="blur"></Image>
+<Image src={pathoftotality} placeholder="blur"></Image>
+<Image src={purplemountain} placeholder="blur"></Image>
+<Image src={selfportrait} placeholder="blur"></Image>
+<Image src={stellarmeditation} placeholder="blur"></Image>
+*/
