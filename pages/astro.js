@@ -3,17 +3,14 @@ import Image from "next/image";
 import Nav from "../components/Nav.js";
 import gallerystyles from "../styles/Gallery.module.css";
 
-/*
-import astrobackyard from "../pages/public/Astro/Astro Backyard.jpg";
-import eyeofthestorm from "../pages/public/Astro/Eye of the Storm.jpg";
-import giantleap from "../pages/public/Astro/Giant Leap.jpg";
-import lunareclipse from "../pages/public/Astro/Lunar Eclipse_.jpg";
-import mountainnight from "../pages/public/Astro/MountainNight2Healed.jpg";
-import pathoftotality from "../pages/public/Astro/Path of Totality.jpg";
-import purplemountain from "../pages/public/Astro/Purple Mountain.jpg";
-import selfportrait from "../pages/public/Astro/Self Portrait.jpg";
-import stellarmeditation from "../pages/public/Astro/Stellar Meditation.jpg";
-*/
+import astrobackyard from "../public/Astro/Astro Backyard.jpg";
+import eyeofthestorm from "../public/Astro/Eye of the Storm.jpg";
+import giantleap from "../public/Astro/Giant Leap.jpg";
+import lunareclipse from "../public/Astro/Lunar Eclipse.jpg";
+import mountainnight from "../public/Astro/Mountain Night.jpg";
+import pathoftotality from "../public/Astro/Path of Totality.jpg";
+import purplemountain from "../public/Astro/Purple Mountain.jpg";
+import stellarmeditation from "../public/Astro/Stellar Meditation.jpg";
 
 export default function Astro() {
   return (
@@ -24,18 +21,14 @@ export default function Astro() {
       <div className={gallerystyles.gallery_title}>
         <h1>Astro</h1>
       </div>
+      <Image src={astrobackyard} placeholder="blur"></Image>
+      <Image src={eyeofthestorm} placeholder="blur"></Image>
+      <Image src={giantleap} placeholder="blur"></Image>
+      <Image src={lunareclipse} placeholder="blur"></Image>
+      <Image src={mountainnight} placeholder="blur"></Image>
+      <Image src={pathoftotality} placeholder="blur"></Image>
+      <Image src={purplemountain} placeholder="blur"></Image>
+      <Image src={stellarmeditation} placeholder="blur"></Image>
     </div>
   );
 }
-
-/*
-<Image src={astrobackyard} placeholder="blur"></Image>
-<Image src={eyeofthestorm} placeholder="blur"></Image>
-<Image src={giantleap} placeholder="blur"></Image>
-<Image src={lunareclipse} placeholder="blur"></Image>
-<Image src={mountainnight} placeholder="blur"></Image>
-<Image src={pathoftotality} placeholder="blur"></Image>
-<Image src={purplemountain} placeholder="blur"></Image>
-<Image src={selfportrait} placeholder="blur"></Image>
-<Image src={stellarmeditation} placeholder="blur"></Image>
-*/
