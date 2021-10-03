@@ -1,28 +1,28 @@
 .row {
-  display: inline-flex;
-  padding-bottom: 10%;
+  display: flex;
   align-items: center;
-  align-self: center;
+  flex-wrap: wrap;
 }
 
 .column {
   flex-grow: 10;
   padding: 6px;
+  text-align: center;
 }
 
 .column:hover {
   transform: scale(1.05);
   z-index: 2;
+  cursor: pointer;
 }
 
 .section_title {
   color: white;
-  text-align: center;
 }
 
 .overall_title {
   color: white;
-  padding-bottom: 10%;
+  padding-bottom: 3%;
   padding-top: 10px;
   text-align: center;
 }
@@ -30,4 +30,5 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
