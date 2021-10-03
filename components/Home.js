@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import homestyles from "../styles/Home.module.css";
+import Helmet from "react-helmet";
 
 import travelcover from "../public/Cover Images/Davids and Goliath.jpg";
 import wildlifecover from "../public/Cover Images/Eyes In A Green Ocean.jpg";
 import astrocover from "../public/Cover Images/Stellar Meditation.jpg";
-import experimentalcover from "../public/Cover Images/Zara Eye.jpg";
-import triphammer from "../public/Cover Images/Trippin Hammer Swirl.jpg";
 
 export default function Home() {
   return (
     <div>
+      <Helmet bodyAttributes={{ style: "background-color : #000000" }} />;
       <div className={homestyles.overall_title}>
         Benjamin Shapiro&apos;s Photography
       </div>
@@ -24,16 +24,8 @@ export default function Home() {
           </div>
         </div>
         <div className={homestyles.column}>
-          <Link href="/ithaca">
-            <Image src={triphammer} placeholder="blur"></Image>
-          </Link>
-          <div className={homestyles.section_title}>
-            <Link href="/ithaca">Ithaca</Link>
-          </div>
-        </div>
-        <div className={homestyles.column}>
           <Link href="/wildlife">
-            <Image src={wildlifecover} placeholder="blur"></Image>
+            <Image src={wildlifecover} placeholder="blur" width="500 "></Image>
           </Link>
           <div className={homestyles.section_title}>
             <Link href="/wildlife">Wildlife</Link>
@@ -45,14 +37,6 @@ export default function Home() {
           </Link>
           <div className={homestyles.section_title}>
             <Link href="/travel">Travel</Link>
-          </div>
-        </div>
-        <div className={homestyles.column}>
-          <Link href="/experimental">
-            <Image src={experimentalcover} placeholder="blur"></Image>
-          </Link>
-          <div className={homestyles.section_title}>
-            <Link href="/experimental">Experimental</Link>
           </div>
         </div>
       </div>

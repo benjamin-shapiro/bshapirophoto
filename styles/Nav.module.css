@@ -1,20 +1,15 @@
 .row {
   display: flex;
+  padding-top: 0.5%;
 }
 
 .column {
   background-color: black;
-
   color: white;
   flex: 10%;
-  padding: 2%;
   text-align: center;
-
 }
 
-.column:hover{
-  transform: scale(1.1);
-  border-color: white;
-  border-style: solid;
-  border-width: thin;
+.column:hover {
+  transform: scale(1.6);
 }

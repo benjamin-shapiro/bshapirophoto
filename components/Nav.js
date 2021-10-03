@@ -11,22 +11,20 @@ export default function Nav() {
         <Link href="/astro">Astro</Link>
       </div>
       <div className={navStyles.column}>
-        <Link href="/ithaca">Ithaca</Link>
-      </div>
-      <div className={navStyles.column}>
         <Link href="/wildlife">Wildlife</Link>
       </div>
       <div className={navStyles.column}>
         <Link href="/travel">Travel</Link>
       </div>
-      <div className={navStyles.column}>
-        <Link href="/experimental">Experimental</Link>
-      </div>
-      <div className={navStyles.column}>
-        <Link href="/about">About</Link>
-      </div>
     </div>
   );
 }
 
-//<a href="/contact">Contact</a>
+/*
+<div className={navStyles.column}>
+  <Link href="/about">About</Link>
+</div>
+<div className={navStyles.column}>
+  <Link href="/contact">Contact</Link>
+</div>
+*/

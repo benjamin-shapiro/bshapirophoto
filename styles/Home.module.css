@@ -1,11 +1,13 @@
 .row {
-  display: flex;
-  padding-bottom: 100%;
+  display: inline-flex;
+  padding-bottom: 10%;
+  align-items: center;
+  align-self: center;
 }
 
 .column {
-  flex: 20%;
-  padding: 5px;
+  flex-grow: 10;
+  padding: 6px;
 }
 
 .column:hover {

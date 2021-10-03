@@ -3,27 +3,18 @@ import Image from "next/image";
 import Nav from "../components/Nav.js";
 import gallerystyles from "../styles/Gallery.module.css";
 import Gallery from "react-photo-gallery";
-
-//import astrobackyard from "https://live.staticflickr.com/65535/51517017235_db54b8ba7d_o.jpg";
-//import eyeofthestorm from "https://www.flickr.com/photos/181962228@N06/51516812124/in/album-72157719902782403/.jpg";
-/*
-import giantleap from "../public/Astro/Giant Leap.jpg";
-import lunareclipse from "../public/Astro/Lunar Eclipse.jpg";
-import mountainnight from "../public/Astro/Mountain Night.jpg";
-import pathoftotality from "../public/Astro/Path of Totality.jpg";
-import purplemountain from "../public/Astro/Purple Mountain.jpg";
-import stellarmeditation from "../public/Astro/Stellar Meditation.jpg";
-*/
+import Helmet from "react-helmet";
+import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 const photos = [
   {
     src: "https://live.staticflickr.com/65535/51517017235_db54b8ba7d_o.jpg",
-    width: 2,
+    width: 1.9,
     height: 1,
   },
   {
     src: "https://live.staticflickr.com/65535/51516812124_f78ce1ced3_o.jpg",
-    width: 2,
+    width: 1.8,
     height: 1,
   },
   {
@@ -33,39 +24,60 @@ const photos = [
   },
   {
     src: "https://live.staticflickr.com/65535/51516322833_5e7c7e4f2f_o.jpg",
-    width: 2,
+    width: 1.9,
     height: 1,
   },
   {
-    src: "https://live.staticflickr.com/65535/51516812124_f78ce1ced3_o.jpg",
-    width: 2,
+    src: "https://live.staticflickr.com/65535/51517017150_da6741a378_o.jpg",
+    width: 1.65,
     height: 1,
   },
   {
-    src: "https://live.staticflickr.com/65535/51516812124_f78ce1ced3_o.jpg",
-    width: 2,
+    src: "https://live.staticflickr.com/65535/51516322838_48feedbae2_o.jpg",
+    width: 1.4,
     height: 1,
   },
   {
-    src: "https://live.staticflickr.com/65535/51516812124_f78ce1ced3_o.jpg",
-    width: 2,
+    src: "https://live.staticflickr.com/65535/51516812109_6c3118cf43_o.jpg",
+    width: 1.75,
     height: 1,
   },
   {
-    src: "https://live.staticflickr.com/65535/51516812124_f78ce1ced3_o.jpg",
-    width: 2,
+    src: "https://live.staticflickr.com/65535/51517017170_808e0cd3bd_b.jpg",
+    width: 1.4,
     height: 1,
   },
   {
-    src: "https://live.staticflickr.com/65535/51516812124_f78ce1ced3_o.jpg",
-    width: 2,
+    src: "https://live.staticflickr.com/65535/51515293907_7253b834d8_b.jpg",
+    width: 1,
+    height: 1.65,
+  },
+  {
+    src: "https://live.staticflickr.com/65535/51516093686_bda7db148e_o.jpg",
+    width: 1.6,
+    height: 1,
+  },
+  {
+    src: "https://live.staticflickr.com/65535/51516094376_7fa8d55e85_o.jpg",
+    width: 1.1,
+    height: 1,
+  },
+  {
+    src: "https://live.staticflickr.com/65535/51515293832_174cf1a2c8_o.jpg",
+    width: 1.6,
+    height: 1,
+  },
+  {
+    src: "https://live.staticflickr.com/65535/51517016955_f56ff6a948_o.jpg",
+    width: 1.5,
     height: 1,
   },
 ];
 
 export default function Astro() {
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div>
+      <Helmet bodyAttributes={{ style: "background-color : #000000" }} />;
       <div>
         <Nav />
       </div>
@@ -76,14 +88,3 @@ export default function Astro() {
     </div>
   );
 }
-
-/*
-<Image src={astrobackyard} placeholder="blur"></Image>
-<Image src={eyeofthestorm} placeholder="blur"></Image>
-<Image src={giantleap} placeholder="blur"></Image>
-<Image src={lunareclipse} placeholder="blur"></Image>
-<Image src={mountainnight} placeholder="blur"></Image>
-<Image src={pathoftotality} placeholder="blur"></Image>
-<Image src={purplemountain} placeholder="blur"></Image>
-<Image src={stellarmeditation} placeholder="blur"></Image>
-*/
