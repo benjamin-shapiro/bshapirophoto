@@ -13,8 +13,6 @@ New Features:
 
     About / contact page with form that goes to email
 
-    Proper logo for browser tab preview/description
-
     Snazzy nav bar with boxes that get brighter / lighter and seem to move forward in 3d towards the user on hover
 
     More photos from old laptop
