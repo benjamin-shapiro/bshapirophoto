@@ -1,15 +1,9 @@
-.row {
-  display: flex;
-  padding-top: 0.5%;
+.socials {
+ padding-top: 3.5%;
+ text-align: center;
+ display: flex;
+ justify-content: space-around;
+ margin-left: 30%;
+ margin-right: 30%;
 }
 
-.column {
-  background-color: black;
-  color: white;
-  flex: 10%;
-  text-align: center;
-}
-
-.column:hover {
-  transform: scale(1.6);
-}

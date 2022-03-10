@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "../components/Nav.js";
 import Home from "../components/Home.js";
+import Footer from "../components/Footer.js";
 
 export default function Homescreen() {
   return (
@@ -23,6 +24,7 @@ export default function Homescreen() {
 
       <div>
         <Home />
+        <Footer />
       </div>
     </div>
   );

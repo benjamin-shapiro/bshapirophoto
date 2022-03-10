@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import homestyles from "../styles/Home.module.css";
 import Helmet from "react-helmet";
-import Footer from "./Nav.js";
 
 import travelcover from "/public/Davids and Goliath Crop.jpg";
 import wildlifecover from "/public/Eyes In A Green Ocean Crop.jpg";
