@@ -14,5 +14,6 @@ export default function Footer() {
       <SocialIcon url="https://twitter.com/ShapiroSpace" target="_blank"/>
       <SocialIcon url="mailto:bps78@cornell.edu" target="bps78@cornell.edu"/>
     </div>
+    
   );
 }

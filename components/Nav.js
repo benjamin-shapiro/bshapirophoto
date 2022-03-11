@@ -4,27 +4,39 @@ import navStyles from "../styles/Nav.module.css";
 export default function Nav() {
   return (
     <div className={navStyles.row}>
-      <div className={navStyles.column}>
-        <Link href="/">Home</Link>
-      </div>
-      <div className={navStyles.column}>
-        <Link href="/astro">Astro</Link>
-      </div>
-      <div className={navStyles.column}>
-        <Link href="/wildlife">Wildlife</Link>
-      </div>
-      <div className={navStyles.column}>
-        <Link href="/travel">Travel</Link>
-      </div>
+      <Link href="/">
+        <div className={navStyles.column}>
+          Home
+        </div>
+      </Link>
+      <Link href="/astro">
+        <div className={navStyles.column}>
+          Astro
+        </div>
+      </Link>
+      <Link href="/wildlife">
+        <div className={navStyles.column}>
+          Wildlife
+        </div>
+      </Link>
+      <Link href="/travel">
+        <div className={navStyles.column}>
+          Travel
+        </div>
+      </Link>
     </div>
   );
 }
 
 /*
-<div className={navStyles.column}>
-  <Link href="/about">About</Link>
-</div>
-<div className={navStyles.column}>
-  <Link href="/contact">Contact</Link>
-</div>
+<Link href="/about">
+  <div className={navStyles.column}>
+    About
+  </div>
+</Link>
+<Link href="/contact">
+  <div className={navStyles.column}>
+    Contact
+  </div>
+</Link>
 */
