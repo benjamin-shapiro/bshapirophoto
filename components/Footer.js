@@ -10,7 +10,7 @@ export default function Footer() {
     <div className={footerStyles.socials}>
       <SocialIcon url="https://www.linkedin.com/in/benjaminshapiro1/" target="_blank"/>
       <SocialIcon url="https://benjamin-shapiro.github.io/" target="_blank"/>
-      <SocialIcon url="mailto:bps78@cornell.edu" target="bps78@cornell.edu"/>
+      <SocialIcon url="mailto: benjaminpshapiro@gmail.com" target="benjaminpshapiro@gmail.com"/>
     </div>
     
   );
