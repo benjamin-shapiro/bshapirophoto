@@ -1,47 +1,65 @@
-import Image from "next/image";
 import Link from "next/link";
 import homestyles from "../styles/Home.module.css";
-import Helmet from "react-helmet";
 
-import travelcover from "/public/Davids and Goliath Crop.jpg";
-import wildlifecover from "/public/Eyes In A Green Ocean Crop.jpg";
-import astrocover from "/public/Mountain Night Crop.jpg";
+const collections = [
+  {
+    href: "/astro",
+    title: "Astro",
+    description: "Night skies, eclipses, and long-exposure landscapes.",
+    image:
+      "https://live.staticflickr.com/65535/51546295256_b0c68e65b6_o.jpg",
+  },
+  {
+    href: "/wildlife",
+    title: "Wildlife",
+    description: "Close encounters with wild species and quiet moments.",
+    image:
+      "https://live.staticflickr.com/65535/51547217385_5e3a59dc05_o.jpg",
+  },
+  {
+    href: "/travel",
+    title: "Travel",
+    description: "Places, textures, and stories captured on the road.",
+    image:
+      "https://live.staticflickr.com/65535/51545497352_de749d2b4d_o.jpg",
+  },
+];
 
 export default function Home() {
   return (
-    <div>
-      <Helmet bodyAttributes={{ style: "background-color : #000000" }} />;
-      <div className={homestyles.overall_title}>
-        <h1>Benjamin Shapiro&apos;s Photography</h1>
+    <main className={homestyles.page}>
+      <section className={homestyles.hero}>
+        <p className={homestyles.kicker}>Photography Portfolio</p>
+        <h1 className={homestyles.title}>Benjamin Shapiro</h1>
+        <p className={homestyles.subtitle}>
+          A curated collection of astrophotography, wildlife moments, and
+          travel scenes.
+        </p>
+      </section>
+
+      <section className={homestyles.grid} aria-label="Photo collections">
+        {collections.map((collection) => (
+          <Link key={collection.href} href={collection.href}>
+            <a className={homestyles.card}>
+              <img
+                className={homestyles.cardImage}
+                src={collection.image}
+                alt={`${collection.title} photography preview`}
+              />
+              <span className={homestyles.cardShade} />
+              <div className={homestyles.cardContent}>
+                <h2 className={homestyles.cardTitle}>{collection.title}</h2>
+                <p className={homestyles.cardDescription}>
+                  {collection.description}
+                </p>
+              </div>
+            </a>
+          </Link>
+        ))}
+      </section>
+      <div className={homestyles.note}>
+        High-resolution versions and full albums are available on request.
       </div>
-      <div className={homestyles.container}>
-        <div className={homestyles.row}>
-          <div className={homestyles.column}>
-            <Link href="/astro">
-              <img src="https://live.staticflickr.com/65535/51546295256_b0c68e65b6_o.jpg"></img>
-            </Link>
-            <div className={homestyles.section_title}>
-              <Link href="/astro">Astro</Link>
-            </div>
-          </div>
-          <div className={homestyles.column}>
-            <Link href="/wildlife">
-              <img src="https://live.staticflickr.com/65535/51547217385_5e3a59dc05_o.jpg"></img>
-            </Link>
-            <div className={homestyles.section_title}>
-              <Link href="/wildlife">Wildlife</Link>
-            </div>
-          </div>
-          <div className={homestyles.column}>
-            <Link href="/travel">
-              <img src="https://live.staticflickr.com/65535/51545497352_de749d2b4d_o.jpg"></img>
-            </Link>
-            <div className={homestyles.section_title}>
-              <Link href="/travel">Travel</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }

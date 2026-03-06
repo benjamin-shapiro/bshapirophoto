@@ -1,10 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
-import Nav from "../components/Nav.js";
-import gallerystyles from "../styles/Gallery.module.css";
-import Gallery from "react-photo-gallery";
-import Helmet from "react-helmet";
-import { RemoveScrollBar } from "react-remove-scroll-bar";
+import GalleryPage from "../components/GalleryPage.js";
 
 const photos = [
   {
@@ -63,15 +57,10 @@ const photos = [
 
 export default function Wildlife() {
   return (
-    <div>
-      <Helmet bodyAttributes={{ style: "background-color : #000000" }} />;
-      <div>
-        <Nav />
-      </div>
-      <div className={gallerystyles.gallery_title}>
-        <h1>Wildlife</h1>
-      </div>
-      <Gallery photos={photos} />;
-    </div>
+    <GalleryPage
+      title="Wildlife"
+      subtitle="Nature portraits and spontaneous moments from the wild."
+      photos={photos}
+    />
   );
 }

@@ -1,42 +1,23 @@
 import Link from "next/link";
 import navStyles from "../styles/Nav.module.css";
 
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/astro", label: "Astro" },
+  { href: "/wildlife", label: "Wildlife" },
+  { href: "/travel", label: "Travel" },
+];
+
 export default function Nav() {
   return (
-    <div className={navStyles.row}>
-      <Link href="/">
-        <div className={navStyles.column}>
-          Home
-        </div>
-      </Link>
-      <Link href="/astro">
-        <div className={navStyles.column}>
-          Astro
-        </div>
-      </Link>
-      <Link href="/wildlife">
-        <div className={navStyles.column}>
-          Wildlife
-        </div>
-      </Link>
-      <Link href="/travel">
-        <div className={navStyles.column}>
-          Travel
-        </div>
-      </Link>
-    </div>
+    <header className={navStyles.navShell}>
+      <nav className={navStyles.nav} aria-label="Primary">
+        {navItems.map((item) => (
+          <Link key={item.href} href={item.href}>
+            <a className={navStyles.navLink}>{item.label}</a>
+          </Link>
+        ))}
+      </nav>
+    </header>
   );
 }
-
-/*
-<Link href="/about">
-  <div className={navStyles.column}>
-    About
-  </div>
-</Link>
-<Link href="/contact">
-  <div className={navStyles.column}>
-    Contact
-  </div>
-</Link>
-*/

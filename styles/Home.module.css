@@ -1,34 +1,134 @@
-.row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.page {
+  width: min(1160px, 94vw);
+  margin: 0 auto;
+  padding: 2.4rem 0 1.25rem;
 }
 
-.column {
-  flex-grow: 10;
-  padding: 6px;
+.hero {
+  margin: 0 auto 2.1rem;
+  max-width: 740px;
   text-align: center;
 }
 
-.column:hover {
-  transform: scale(1.05);
-  z-index: 2;
-  cursor: pointer;
+.kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-.section_title {
-  color: white;
+.title {
+  margin: 0.6rem 0 0.45rem;
+  font-size: clamp(2.3rem, 7.2vw, 4.3rem);
+  line-height: 1.05;
 }
 
-.overall_title {
-  color: white;
-  padding-bottom: 3%;
-  padding-top: 10px;
+.subtitle {
+  margin: 0 auto;
+  max-width: 660px;
+  font-size: clamp(1rem, 2.8vw, 1.14rem);
+  color: var(--text-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 360px;
+  box-shadow: var(--shadow);
+  transform: translateY(0);
+  transition: transform 240ms ease, border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(240, 214, 167, 0.48);
+  box-shadow: 0 30px 64px rgba(0, 0, 0, 0.55);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.cardShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(6, 8, 13, 0.94) 8%,
+    rgba(6, 8, 13, 0.2) 52%
+  );
+}
+
+.cardContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.15rem 1rem 1rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.cardDescription {
+  margin: 0.3rem 0 0;
+  color: #dfe6f2;
+  font-size: 0.95rem;
+}
+
+.note {
+  margin: 1.25rem auto 0;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 0.83rem;
+  color: var(--text-soft);
   text-align: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding-top: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 310px;
+  }
+
+  .cardTitle {
+    font-size: 1.55rem;
+  }
 }

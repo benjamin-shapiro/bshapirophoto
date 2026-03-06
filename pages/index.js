@@ -1,14 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import Nav from "../components/Nav.js";
 import Home from "../components/Home.js";
 import Footer from "../components/Footer.js";
 
 export default function Homescreen() {
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div>
       <Head>
+        <title>Benjamin Shapiro Photography</title>
+        <meta
+          name="description"
+          content="Astro, wildlife, and travel photography by Benjamin Shapiro."
+        />
         <meta
           name="keywords"
           content="Benjamin Shapiro Cornell, Benjamin Shapiro Space, Benjamin Shapiro Astrophotography,\
@@ -21,11 +24,9 @@ export default function Homescreen() {
           <link rel="icon" type="image/png" sizes="16x16" href="/eclipse16.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/eclipse-apple-touch.png" />
       </Head>
-
-      <div>
-        <Home />
-        <Footer />
-      </div>
+      <Nav />
+      <Home />
+      <Footer />
     </div>
   );
 }
