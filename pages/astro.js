@@ -70,11 +70,5 @@ const photos = [
 ];
 
 export default function Astro() {
-  return (
-    <GalleryPage
-      title="Astro"
-      subtitle="Long exposures of star fields, eclipses, and moonlit scenes."
-      photos={photos}
-    />
-  );
+  return <GalleryPage title="Astro" photos={photos} />;
 }

@@ -30,8 +30,6 @@ export default function Home() {
         <h1 className={homestyles.title}>Benjamin Shapiro</h1>
       </section>
 
-      <div className={homestyles.halo} aria-hidden="true" />
-
       <section className={homestyles.grid} aria-label="Photo collections">
         {collections.map((collection) => (
           <Link key={collection.href} href={collection.href}>

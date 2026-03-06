@@ -56,11 +56,5 @@ const photos = [
 ];
 
 export default function Travel() {
-  return (
-    <GalleryPage
-      title="Travel"
-      subtitle="Visual notes from cities, coastlines, and mountain paths."
-      photos={photos}
-    />
-  );
+  return <GalleryPage title="Travel" photos={photos} />;
 }

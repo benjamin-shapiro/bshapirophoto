@@ -56,11 +56,5 @@ const photos = [
 ];
 
 export default function Wildlife() {
-  return (
-    <GalleryPage
-      title="Wildlife"
-      subtitle="Nature portraits and spontaneous moments from the wild."
-      photos={photos}
-    />
-  );
+  return <GalleryPage title="Wildlife" photos={photos} />;
 }

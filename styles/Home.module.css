@@ -5,7 +5,7 @@
 }
 
 .hero {
-  margin: 0 auto 1.3rem;
+  margin: 0 auto 1.2rem;
   max-width: 740px;
   text-align: center;
 }
@@ -22,49 +22,6 @@
   margin: 0.55rem 0 0;
   font-size: clamp(2.4rem, 7.2vw, 4.45rem);
   line-height: 1.04;
-}
-
-.halo {
-  position: relative;
-  height: clamp(210px, 34vw, 320px);
-  border-radius: 28px;
-  margin-bottom: 1.1rem;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  overflow: hidden;
-  box-shadow:
-    0 44px 70px rgba(0, 0, 0, 0.58),
-    0 0 46px rgba(63, 126, 222, 0.32);
-  background-image:
-    linear-gradient(140deg, rgba(2, 5, 10, 0.12), rgba(2, 5, 10, 0.8)),
-    url("https://live.staticflickr.com/65535/51546295256_b0c68e65b6_o.jpg"),
-    url("/Mountain Night Crop.jpg");
-  background-size: cover, cover, cover;
-  background-position: center, center, center;
-}
-
-.halo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 23% 42%, rgba(77, 158, 255, 0.52), transparent 48%),
-    radial-gradient(circle at 72% 56%, rgba(21, 42, 92, 0.52), transparent 52%);
-  mix-blend-mode: screen;
-}
-
-.halo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: inherit;
-  background: linear-gradient(
-    105deg,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 255, 255, 0.03) 34%,
-    transparent 62%
-  );
-  backdrop-filter: blur(2.4px) saturate(112%);
 }
 
 .grid {
@@ -130,10 +87,6 @@
 @media (max-width: 960px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .halo {
-    height: clamp(190px, 42vw, 290px);
   }
 }
 
