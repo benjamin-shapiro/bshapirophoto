@@ -1,58 +1,95 @@
 .page {
-  width: min(1160px, 94vw);
+  width: min(1140px, 94vw);
   margin: 0 auto;
-  padding: 2.4rem 0 1.25rem;
+  padding: 1.8rem 0 0.6rem;
 }
 
 .hero {
-  margin: 0 auto 2.1rem;
+  margin: 0 auto 1.3rem;
   max-width: 740px;
   text-align: center;
 }
 
 .kicker {
   margin: 0;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.36em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
 .title {
-  margin: 0.6rem 0 0.45rem;
-  font-size: clamp(2.3rem, 7.2vw, 4.3rem);
-  line-height: 1.05;
+  margin: 0.55rem 0 0;
+  font-size: clamp(2.4rem, 7.2vw, 4.45rem);
+  line-height: 1.04;
 }
 
-.subtitle {
-  margin: 0 auto;
-  max-width: 660px;
-  font-size: clamp(1rem, 2.8vw, 1.14rem);
-  color: var(--text-soft);
+.halo {
+  position: relative;
+  height: clamp(210px, 34vw, 320px);
+  border-radius: 28px;
+  margin-bottom: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  overflow: hidden;
+  box-shadow:
+    0 44px 70px rgba(0, 0, 0, 0.58),
+    0 0 46px rgba(63, 126, 222, 0.32);
+  background-image:
+    linear-gradient(140deg, rgba(2, 5, 10, 0.12), rgba(2, 5, 10, 0.8)),
+    url("https://live.staticflickr.com/65535/51546295256_b0c68e65b6_o.jpg"),
+    url("/Mountain Night Crop.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+}
+
+.halo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 23% 42%, rgba(77, 158, 255, 0.52), transparent 48%),
+    radial-gradient(circle at 72% 56%, rgba(21, 42, 92, 0.52), transparent 52%);
+  mix-blend-mode: screen;
+}
+
+.halo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.03) 34%,
+    transparent 62%
+  );
+  backdrop-filter: blur(2.4px) saturate(112%);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .card {
   position: relative;
-  border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 19px;
   overflow: hidden;
-  min-height: 360px;
-  box-shadow: var(--shadow);
+  min-height: 355px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(1, 3, 7, 0.72);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45);
   transform: translateY(0);
-  transition: transform 240ms ease, border-color 240ms ease,
-    box-shadow 240ms ease;
+  transition: transform 220ms ease, border-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(240, 214, 167, 0.48);
-  box-shadow: 0 30px 64px rgba(0, 0, 0, 0.55);
+  transform: translateY(-7px);
+  border-color: rgba(148, 207, 255, 0.62);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.66);
 }
 
 .cardImage {
@@ -63,7 +100,7 @@
 }
 
 .card:hover .cardImage {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .cardShade {
@@ -71,8 +108,8 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(6, 8, 13, 0.94) 8%,
-    rgba(6, 8, 13, 0.2) 52%
+    rgba(2, 4, 8, 0.96) 9%,
+    rgba(2, 4, 8, 0.22) 56%
   );
 }
 
@@ -81,43 +118,28 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 1.15rem 1rem 1rem;
+  padding: 1.05rem 0.95rem;
 }
 
 .cardTitle {
   margin: 0;
-  font-size: 1.8rem;
   color: #ffffff;
-}
-
-.cardDescription {
-  margin: 0.3rem 0 0;
-  color: #dfe6f2;
-  font-size: 0.95rem;
-}
-
-.note {
-  margin: 1.25rem auto 0;
-  width: fit-content;
-  max-width: 100%;
-  padding: 0.55rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  font-size: 0.83rem;
-  color: var(--text-soft);
-  text-align: center;
+  font-size: 1.73rem;
 }
 
 @media (max-width: 960px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .halo {
+    height: clamp(190px, 42vw, 290px);
+  }
 }
 
 @media (max-width: 700px) {
   .page {
-    padding-top: 1.5rem;
+    padding-top: 1.35rem;
   }
 
   .grid {
@@ -125,10 +147,6 @@
   }
 
   .card {
-    min-height: 310px;
-  }
-
-  .cardTitle {
-    font-size: 1.55rem;
+    min-height: 305px;
   }
 }

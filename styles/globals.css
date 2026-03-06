@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap");
 
 :root {
-  --bg-deep: #06090f;
-  --bg-mid: #0f182a;
-  --surface: rgba(13, 22, 36, 0.72);
-  --surface-strong: rgba(8, 13, 23, 0.9);
-  --line: rgba(223, 194, 141, 0.24);
-  --text-main: #f6f4f0;
-  --text-soft: #c5ccda;
-  --accent: #dfc28d;
-  --accent-bright: #f0d6a7;
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  --bg-deep: #010206;
+  --bg-mid: #050810;
+  --surface: rgba(8, 12, 18, 0.68);
+  --surface-strong: rgba(4, 7, 12, 0.86);
+  --line: rgba(255, 255, 255, 0.14);
+  --text-main: #f6f8fc;
+  --text-soft: #9ca9bb;
+  --accent: #84b8f1;
+  --accent-bright: #b6d8ff;
+  --shadow: 0 30px 65px rgba(0, 0, 0, 0.55);
 }
 
 html,
@@ -30,10 +30,9 @@ body {
   font-family: "Manrope", sans-serif;
   line-height: 1.55;
   background:
-    radial-gradient(circle at 12% 12%, rgba(77, 120, 197, 0.26), transparent 30%),
-    radial-gradient(circle at 88% 8%, rgba(196, 132, 69, 0.22), transparent 30%),
-    radial-gradient(circle at 50% 78%, rgba(87, 119, 181, 0.2), transparent 34%),
-    linear-gradient(160deg, var(--bg-deep), var(--bg-mid) 52%, #04070d);
+    radial-gradient(circle at 48% 74%, rgba(32, 66, 138, 0.25), transparent 42%),
+    radial-gradient(circle at 19% 18%, rgba(46, 90, 174, 0.18), transparent 30%),
+    linear-gradient(164deg, var(--bg-deep), var(--bg-mid) 58%, #02040a);
   background-attachment: fixed;
 }
 
@@ -41,15 +40,14 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 44px 44px;
   pointer-events: none;
-  opacity: 0.2;
   z-index: -1;
+  opacity: 0.2;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 a {

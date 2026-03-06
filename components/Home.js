@@ -5,21 +5,18 @@ const collections = [
   {
     href: "/astro",
     title: "Astro",
-    description: "Night skies, eclipses, and long-exposure landscapes.",
     image:
       "https://live.staticflickr.com/65535/51546295256_b0c68e65b6_o.jpg",
   },
   {
     href: "/wildlife",
     title: "Wildlife",
-    description: "Close encounters with wild species and quiet moments.",
     image:
       "https://live.staticflickr.com/65535/51547217385_5e3a59dc05_o.jpg",
   },
   {
     href: "/travel",
     title: "Travel",
-    description: "Places, textures, and stories captured on the road.",
     image:
       "https://live.staticflickr.com/65535/51545497352_de749d2b4d_o.jpg",
   },
@@ -31,11 +28,9 @@ export default function Home() {
       <section className={homestyles.hero}>
         <p className={homestyles.kicker}>Photography Portfolio</p>
         <h1 className={homestyles.title}>Benjamin Shapiro</h1>
-        <p className={homestyles.subtitle}>
-          A curated collection of astrophotography, wildlife moments, and
-          travel scenes.
-        </p>
       </section>
+
+      <div className={homestyles.halo} aria-hidden="true" />
 
       <section className={homestyles.grid} aria-label="Photo collections">
         {collections.map((collection) => (
@@ -49,17 +44,11 @@ export default function Home() {
               <span className={homestyles.cardShade} />
               <div className={homestyles.cardContent}>
                 <h2 className={homestyles.cardTitle}>{collection.title}</h2>
-                <p className={homestyles.cardDescription}>
-                  {collection.description}
-                </p>
               </div>
             </a>
           </Link>
         ))}
       </section>
-      <div className={homestyles.note}>
-        High-resolution versions and full albums are available on request.
-      </div>
     </main>
   );
 }
