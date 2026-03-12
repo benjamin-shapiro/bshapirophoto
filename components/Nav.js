@@ -3,6 +3,7 @@ import navStyles from "../styles/Nav.module.css";
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/museum", label: "Museum" },
   { href: "/astro", label: "Astro" },
   { href: "/wildlife", label: "Wildlife" },
   { href: "/travel", label: "Travel" },

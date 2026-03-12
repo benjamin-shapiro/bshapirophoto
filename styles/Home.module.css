@@ -5,7 +5,7 @@
 }
 
 .hero {
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 1.35rem;
   max-width: 740px;
   text-align: center;
 }
@@ -22,6 +22,39 @@
   margin: 0.55rem 0 0;
   font-size: clamp(2.4rem, 7.2vw, 4.45rem);
   line-height: 1.04;
+}
+
+.heroActions {
+  margin-top: 1rem;
+}
+
+.museumLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid rgba(140, 185, 241, 0.42);
+  background: linear-gradient(
+    135deg,
+    rgba(17, 35, 63, 0.9),
+    rgba(9, 14, 24, 0.92)
+  );
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34);
+  color: #eef5ff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.museumLink:hover {
+  transform: translateY(-2px);
+  border-color: rgba(182, 216, 255, 0.85);
+  box-shadow: 0 24px 42px rgba(0, 0, 0, 0.46);
 }
 
 .grid {
@@ -101,5 +134,10 @@
 
   .card {
     min-height: 305px;
+  }
+
+  .museumLink {
+    min-width: 0;
+    width: 100%;
   }
 }
