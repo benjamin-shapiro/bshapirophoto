@@ -1,6 +1,26 @@
 import Link from "next/link";
 import homestyles from "../styles/Home.module.css";
-import { galleryCollections } from "../lib/galleryData";
+
+const collections = [
+  {
+    href: "/astro",
+    title: "Astro",
+    image:
+      "https://live.staticflickr.com/65535/51546295256_b0c68e65b6_o.jpg",
+  },
+  {
+    href: "/wildlife",
+    title: "Wildlife",
+    image:
+      "https://live.staticflickr.com/65535/51547217385_5e3a59dc05_o.jpg",
+  },
+  {
+    href: "/travel",
+    title: "Travel",
+    image:
+      "https://live.staticflickr.com/65535/51545497352_de749d2b4d_o.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -8,20 +28,15 @@ export default function Home() {
       <section className={homestyles.hero}>
         <p className={homestyles.kicker}>Photography Portfolio</p>
         <h1 className={homestyles.title}>Benjamin Shapiro</h1>
-        <div className={homestyles.heroActions}>
-          <Link href="/museum">
-            <a className={homestyles.museumLink}>Enter Virtual Gallery</a>
-          </Link>
-        </div>
       </section>
 
       <section className={homestyles.grid} aria-label="Photo collections">
-        {galleryCollections.map((collection) => (
-          <Link key={collection.slug} href={collection.href}>
+        {collections.map((collection) => (
+          <Link key={collection.href} href={collection.href}>
             <a className={homestyles.card}>
               <img
                 className={homestyles.cardImage}
-                src={collection.previewImage}
+                src={collection.image}
                 alt={`${collection.title} photography preview`}
               />
               <span className={homestyles.cardShade} />

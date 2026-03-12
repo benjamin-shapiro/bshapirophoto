@@ -8,13 +8,12 @@
 }
 
 .nav {
-  width: min(920px, 94vw);
+  width: min(840px, 94vw);
   margin: 0 auto;
   padding: 0.95rem 0;
   display: flex;
   justify-content: center;
   gap: 0.55rem;
-  flex-wrap: wrap;
 }
 
 .navLink {
